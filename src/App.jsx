@@ -1,15 +1,18 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Note from "./components/Note";
-import { notes } from "./notes";
+import React from "react";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Note from "./components/Note.jsx";
+import CreateArea from "./components/CreateArea.jsx";
 
-
-export default function App() {
+function App() {
   return (
     <div>
       <Header />
-      {notes.map((note) => <Note key={note.key} title={note.title} content={note.content}/>)}
+      <CreateArea />
+      <Note key={1} title="Note title" content="Note content" />
       <Footer />
     </div>
   );
 }
+
+export default App;
